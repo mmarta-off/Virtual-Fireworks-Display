@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Fireworks Display</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000; /* Dark background for better contrast */
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+        #controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+        }
+        select, button {
+            margin-top: 5px;
+            background: #222;
+            color: #fff;
+            border: 1px solid #555;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="fireworksCanvas"></canvas>
+    <div id="controls">
+        <select id="colorSelector">
+            <option value="random">Random Colors</option>
+            <option value="#ff6347">Tomato</option>
+            <option value="#4682b4">Steel Blue</option>
+            <option value="#32cd32">Lime Green</option>
+        </select>
+        <button onclick="clearSky()">Clear Sky</button>
+    </div>
+    <script src="fireworks.js"></script>
+</body>
+</html>
